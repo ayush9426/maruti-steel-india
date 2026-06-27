@@ -33,14 +33,14 @@ export default function Footer() {
         {/* Main Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-white/10 text-left">
           
-          {/* Column 1: Company Profile (4 cols) */}
-          <div className="lg:col-span-4 space-y-6">
+          {/* Column 1: Company Profile (5 cols) */}
+          <div className="lg:col-span-5 space-y-6">
             <div className="flex items-center gap-3">
-              <div className="relative w-10 h-10 rounded-full bg-white p-1 flex items-center justify-center shadow-md">
+              <div className="relative w-10 h-10 flex items-center justify-center">
                 <img
-                  src="/images/maruti steel. logo jpg.jpg"
+                  src="/images/logo_transparent.png"
                   alt="MSI Gold Logo"
-                  className="w-full h-full object-contain rounded-full"
+                  className="w-full h-full object-contain"
                 />
               </div>
               <div className="flex flex-col">
@@ -88,8 +88,8 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Column 2: Quick Links (2 cols) */}
-          <div className="lg:col-span-2 space-y-4">
+          {/* Column 2: Quick Links (3 cols) */}
+          <div className="lg:col-span-3 space-y-4">
             <h4 className="text-xs uppercase font-extrabold text-white tracking-wider">
               Quick Links
             </h4>
@@ -117,42 +117,8 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 3: Key Products (3 cols) */}
-          <div className="lg:col-span-3 space-y-4">
-            <h4 className="text-xs uppercase font-extrabold text-white tracking-wider">
-              Product Categories
-            </h4>
-            <ul className="space-y-2 text-xs font-semibold text-white/60">
-              <li>
-                <Link to="/products" className="hover:text-primary-light transition-colors">
-                  Stainless Steel Sheets & Plates
-                </Link>
-              </li>
-              <li>
-                <Link to="/products" className="hover:text-primary-light transition-colors">
-                  SS Slot & Round Pipes
-                </Link>
-              </li>
-              <li>
-                <Link to="/products" className="hover:text-primary-light transition-colors">
-                  SS 90 & 45 Degree Elbows
-                </Link>
-              </li>
-              <li>
-                <Link to="/products" className="hover:text-primary-light transition-colors">
-                  Industrial Flanges (Slip-On, Blind)
-                </Link>
-              </li>
-              <li>
-                <Link to="/products" className="hover:text-primary-light transition-colors">
-                  Industrial Valves & Fasteners
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Column 4: Contact Info (3 cols) */}
-          <div className="lg:col-span-3 space-y-4">
+          {/* Column 3: Contact Info (4 cols) */}
+          <div className="lg:col-span-4 space-y-4">
             <h4 className="text-xs uppercase font-extrabold text-white tracking-wider">
               Contact Office
             </h4>

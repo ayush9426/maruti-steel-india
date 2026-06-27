@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, PhoneCall, FileText } from 'lucide-react';
+import { Menu, X, PhoneCall } from 'lucide-react';
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -39,11 +39,11 @@ export default function Navbar() {
           <div className="flex items-center justify-between">
             {/* Logo Group */}
             <Link to="/" className="flex items-center gap-3 group">
-              <div className="relative w-10 h-10 rounded-full bg-white p-1 flex items-center justify-center transition-transform group-hover:scale-105 shadow-md">
+              <div className="relative w-10 h-10 flex items-center justify-center transition-transform group-hover:scale-105">
                 <img
-                  src="/images/maruti steel. logo jpg.jpg"
+                  src="/images/logo_transparent.png"
                   alt="MSI Gold Logo"
-                  className="w-full h-full object-contain rounded-full"
+                  className="w-full h-full object-contain"
                 />
               </div>
               <div className="flex flex-col text-left">
@@ -93,13 +93,6 @@ export default function Navbar() {
                 <PhoneCall size={15} className="text-primary-light" />
                 <span>+91 9512865802</span>
               </a>
-              <Link
-                to="/contact"
-                className="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white font-bold text-xs px-5 py-2.5 rounded-full shadow-premium transition-all duration-300 hover:shadow-premium-lg"
-              >
-                <FileText size={14} />
-                <span>Get a Quote</span>
-              </Link>
             </div>
 
             {/* Mobile Menu Button */}
@@ -147,11 +140,11 @@ export default function Navbar() {
                 {/* Header */}
                 <div className="flex items-center justify-between border-b border-white/10 pb-4">
                   <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-full bg-white p-0.5 flex items-center justify-center shadow-md">
+                    <div className="w-8 h-8 flex items-center justify-center">
                       <img
-                        src="/images/maruti steel. logo jpg.jpg"
+                        src="/images/logo_transparent.png"
                         alt="MSI Gold Logo"
-                        className="w-full h-full object-contain rounded-full"
+                        className="w-full h-full object-contain"
                       />
                     </div>
                     <span className="font-sans font-bold text-sm text-white">MARUTI STEEL</span>
@@ -192,14 +185,6 @@ export default function Navbar() {
                   <PhoneCall size={14} />
                   <span>Call: +91 9512865802</span>
                 </a>
-                <Link
-                  to="/contact"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="flex items-center justify-center gap-2 bg-primary text-white font-bold py-2.5 rounded-full shadow-premium text-xs w-full hover:bg-primary-hover transition-colors"
-                >
-                  <FileText size={14} />
-                  <span>Request Quote</span>
-                </Link>
               </div>
             </motion.div>
           </>

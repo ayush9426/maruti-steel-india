@@ -74,31 +74,22 @@ export default function About() {
   return (
     <div className="w-full">
       {/* Banner */}
-      <div className="bg-navbar-bg text-white pt-28 pb-16 border-b border-secondary/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
-          <h1 className="text-3xl font-extrabold font-sans tracking-tight">
+      <div className="bg-gradient-lavender-soft/60 pt-24 pb-6 border-b border-secondary/35 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h1 className="text-3xl font-black font-sans tracking-tight text-gradient">
             About Maruti Steel India
           </h1>
-          <p className="text-secondary/80 text-sm mt-2 max-w-2xl font-normal leading-relaxed">
-            Supplying premium-grade industrial raw materials and pipe fittings since 2006. Built on quality compliance, transparent metallurgical certifications, and client-first B2B execution.
-          </p>
+          <div className="w-16 h-1 bg-primary mx-auto mt-4 rounded-full" />
         </div>
       </div>
 
       {/* Intro Section */}
-      <section className="py-24 bg-white relative z-10">
+      <section className="pt-6 lg:pt-8 pb-8 lg:pb-12 bg-white relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
             
             {/* Left Column: Intro text */}
             <div className="lg:col-span-6 space-y-6 text-left">
-              <h2 className="text-xs uppercase font-extrabold text-primary tracking-widest">
-                Our Corporate Identity
-              </h2>
-              <h3 className="text-3xl font-extrabold text-text-dark font-sans sm:text-4xl tracking-tight leading-tight">
-                Trusted Manufacturer & Stockist of Heavy-Duty Steel
-              </h3>
-              <div className="w-16 h-1 bg-primary rounded-full mt-2" />
               
               <p className="text-base text-text-muted leading-relaxed font-normal">
                 <strong>Maruti Steel India</strong> is a trusted manufacturer and stockist of premium stainless steel products, supplying high-quality industrial materials across various sectors with a strong focus on quality, precision, durability, and customer satisfaction.
@@ -108,7 +99,7 @@ export default function About() {
               </p>
               
               {/* Highlights badge layout */}
-              <div className="flex flex-wrap gap-4 pt-4 border-t border-secondary/30">
+              <div className="flex flex-wrap gap-4 pt-4 border-t border-secondary/30 justify-start">
                 <div className="flex items-center gap-2">
                   <span className="text-primary font-bold">✔</span>
                   <span className="text-xs font-bold text-text-dark">ISO 9001:2015 Standards</span>
@@ -124,8 +115,8 @@ export default function About() {
               </div>
             </div>
 
-            {/* Right Column: Image Collage */}
-            <div className="lg:col-span-6 flex justify-center">
+            {/* Right Column: Image Collage (Hidden on Mobile) */}
+            <div className="hidden lg:flex lg:col-span-6 justify-center">
               <div className="relative w-full max-w-[460px] aspect-[4/3] rounded-[32px] overflow-hidden shadow-premium-lg border-4 border-white bg-white">
                 <img
                   src="/images/WhatsApp Image 2026-06-27 at 11.11.23 AM.jpeg"
@@ -141,11 +132,11 @@ export default function About() {
       </section>
 
       {/* Services Section */}
-      <section className="py-24 bg-gradient-lavender-soft/40 border-t border-secondary/20 relative z-10">
+      <section className="py-8 bg-gradient-lavender-soft/40 border-t border-secondary/20 relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* Header */}
-          <div className="text-center max-w-2xl mx-auto mb-16">
+          <div className="text-center max-w-2xl mx-auto mb-8">
             <h2 className="text-xs uppercase font-extrabold text-primary tracking-widest">
               What We Do
             </h2>
@@ -158,29 +149,29 @@ export default function About() {
             <div className="w-16 h-1 bg-primary mx-auto mt-4 rounded-full" />
           </div>
 
-          {/* Services Grid (Centered contents, center icons, attractive hover effects) */}
+          {/* Services Grid (2-columns on mobile, centered content, hide desc on mobile) */}
           <motion.div
             variants={containerVariants}
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, margin: '-100px' }}
-            className="grid grid-cols-1 md:grid-cols-2 gap-8"
+            className="grid grid-cols-2 md:grid-cols-2 gap-4 md:gap-8"
           >
             {services.map((svc, idx) => (
               <motion.div
                 variants={cardVariants}
                 key={idx}
-                className="p-8 rounded-[28px] border border-secondary shadow-glass bg-white transition-all duration-300 hover:shadow-premium hover:border-primary/20 hover:-translate-y-1.5 flex flex-col items-center justify-center text-center group"
+                className="p-4 sm:p-8 rounded-[28px] border border-secondary shadow-glass bg-white transition-all duration-300 hover:shadow-premium hover:border-primary/20 hover:-translate-y-1.5 flex flex-col items-center justify-center text-center group"
               >
                 {/* Centered Icon Container */}
-                <div className={`p-4 rounded-2xl bg-gradient-to-br ${svc.color} mb-5 flex items-center justify-center transition-transform group-hover:scale-110 duration-300`}>
-                  <svc.icon className={`w-8 h-8 ${svc.iconColor}`} />
+                <div className={`p-4 rounded-2xl bg-gradient-to-br ${svc.color} mb-4 sm:mb-5 flex items-center justify-center transition-transform group-hover:scale-110 duration-300`}>
+                  <svc.icon className={`w-6 h-6 sm:w-8 sm:h-8 ${svc.iconColor}`} />
                 </div>
                 
-                <h4 className="text-lg font-bold text-text-dark group-hover:text-primary transition-colors">
+                <h4 className="text-sm sm:text-lg font-bold text-text-dark group-hover:text-primary transition-colors leading-snug">
                   {svc.title}
                 </h4>
-                <p className="text-sm text-text-muted mt-3 leading-relaxed font-normal max-w-md">
+                <p className="text-sm text-text-muted mt-3 leading-relaxed font-normal max-w-md hidden sm:block">
                   {svc.desc}
                 </p>
               </motion.div>
@@ -191,11 +182,11 @@ export default function About() {
       </section>
 
       {/* Features Section */}
-      <section className="py-24 bg-white border-t border-secondary/20 relative z-10">
+      <section className="py-8 bg-white border-t border-secondary/20 relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* Header */}
-          <div className="text-center max-w-2xl mx-auto mb-16">
+          <div className="text-center max-w-2xl mx-auto mb-8">
             <h2 className="text-xs uppercase font-extrabold text-primary tracking-widest">
               Core Competencies
             </h2>
@@ -205,7 +196,7 @@ export default function About() {
             <div className="w-16 h-1 bg-primary mx-auto mt-4 rounded-full" />
           </div>
 
-          {/* Features Grid (Centered icons and text, attractive hover card effect) */}
+          {/* Features Grid (Centered icons and text, 1-column on mobile, 4-columns on desktop) */}
           <motion.div
             variants={containerVariants}
             initial="hidden"

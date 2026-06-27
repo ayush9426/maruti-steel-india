@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowRight, ShieldCheck, Truck, Factory, Layers } from 'lucide-react';
+import { ArrowRight, Factory } from 'lucide-react';
 
 export default function Hero() {
   const handleExploreClick = (e, href) => {
@@ -17,17 +17,10 @@ export default function Hero() {
     }
   };
 
-  const badges = [
-    { icon: ShieldCheck, text: 'ISO Quality Standards' },
-    { icon: Layers, text: 'Industrial Grade Products' },
-    { icon: Truck, text: 'PAN India Supply Network' },
-    { icon: Factory, text: 'Trusted Manufacturer' },
-  ];
-
   return (
     <section
       id="home"
-      className="relative min-h-screen pt-24 pb-16 flex items-center bg-gradient-lavender-soft overflow-hidden"
+      className="relative min-h-screen pt-20 pb-12 flex items-center bg-gradient-lavender-soft overflow-hidden"
     >
       {/* Dynamic Background Animated Shapes */}
       <div className="absolute inset-0 pointer-events-none z-0">
@@ -114,29 +107,10 @@ export default function Hero() {
                 <span>Contact Us</span>
               </Link>
             </motion.div>
-
-            {/* Badges Grid */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1, delay: 0.4 }}
-              className="grid grid-cols-2 gap-4 pt-6 max-w-lg"
-            >
-              {badges.map((badge, index) => (
-                <div key={index} className="flex items-center gap-3">
-                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-secondary/50 flex items-center justify-center border border-primary/10">
-                    <badge.icon className="w-4 h-4 text-primary" />
-                  </div>
-                  <span className="text-sm font-semibold text-text-dark">
-                    {badge.text}
-                  </span>
-                </div>
-              ))}
-            </motion.div>
           </div>
 
-          {/* Right Image/Mockup Column */}
-          <div className="lg:col-span-5 relative flex items-center justify-center">
+          {/* Right Image/Mockup Column (Hidden on Mobile) */}
+          <div className="hidden lg:flex lg:col-span-5 relative items-center justify-center">
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -166,7 +140,7 @@ export default function Hero() {
             <motion.div
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
-              className="absolute -top-4 -left-4 bg-white/90 backdrop-blur-md px-4 py-2.5 rounded-2xl border border-secondary shadow-premium text-xs font-bold text-text-dark flex items-center gap-2"
+              className="absolute -top-4 -left-2 sm:-left-4 bg-white/90 backdrop-blur-md px-3 sm:px-4 py-2.5 rounded-2xl border border-secondary shadow-premium text-[10px] sm:text-xs font-bold text-text-dark hidden sm:flex items-center gap-2"
             >
               <span className="text-emerald-500 font-extrabold">✔</span> Premium Grades (304 / 316)
             </motion.div>
@@ -175,7 +149,7 @@ export default function Hero() {
             <motion.div
               animate={{ y: [0, 8, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
-              className="absolute bottom-1/2 -right-6 bg-white/90 backdrop-blur-md px-4 py-2.5 rounded-2xl border border-secondary shadow-premium text-xs font-bold text-text-dark flex items-center gap-2"
+              className="absolute bottom-1/2 -right-2 sm:-right-6 bg-white/90 backdrop-blur-md px-3 sm:px-4 py-2.5 rounded-2xl border border-secondary shadow-premium text-[10px] sm:text-xs font-bold text-text-dark hidden sm:flex items-center gap-2"
             >
               <span className="text-primary font-bold">★</span> 20+ Yrs Metallurgy Experience
             </motion.div>

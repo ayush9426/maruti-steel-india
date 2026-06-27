@@ -7,49 +7,57 @@ export default function WhyChooseUs() {
       icon: ShieldCheck,
       title: 'High Quality Products',
       desc: 'All products are manufactured with top-grade raw steel, ensuring zero defects and superior durability.',
-      color: 'text-primary'
+      color: 'text-primary',
+      bg: 'bg-primary/10 border-primary/20 hover:bg-primary hover:text-white'
     },
     {
       icon: BadgeDollarSign,
       title: 'Competitive Pricing',
       desc: 'Our direct-to-customer business model ensures that you receive high-quality materials at factory rates.',
-      color: 'text-emerald-500'
+      color: 'text-emerald-500',
+      bg: 'bg-emerald-500/10 border-emerald-500/20 hover:bg-emerald-500 hover:text-white'
     },
     {
       icon: Warehouse,
       title: 'Large Inventory',
       desc: 'We maintain massive ready-to-dispatch stock of standard pipes, sheets, and fittings to eliminate delays.',
-      color: 'text-amber-500'
+      color: 'text-amber-500',
+      bg: 'bg-amber-500/10 border-amber-500/20 hover:bg-amber-500 hover:text-white'
     },
     {
       icon: Zap,
       title: 'Fast Dispatch',
       desc: 'With organized logistics, orders are verified and dispatched within 24-48 hours of confirmation.',
-      color: 'text-purple-500'
+      color: 'text-purple-500',
+      bg: 'bg-purple-500/10 border-purple-500/20 hover:bg-purple-500 hover:text-white'
     },
     {
       icon: Handshake,
       title: 'Trusted Supplier',
       desc: 'Over the years, we have built relationships based on transparency, reliability, and certified metal grades.',
-      color: 'text-rose-500'
+      color: 'text-rose-500',
+      bg: 'bg-rose-500/10 border-rose-500/20 hover:bg-rose-500 hover:text-white'
     },
     {
       icon: MapPin,
       title: 'PAN India Delivery',
       desc: 'We ship to all states across India, coordinating with leading freight carriers for safe transport.',
-      color: 'text-cyan-500'
+      color: 'text-cyan-500',
+      bg: 'bg-cyan-500/10 border-cyan-500/20 hover:bg-cyan-500 hover:text-white'
     },
     {
       icon: ClipboardList,
       title: 'Industrial Standards',
       desc: 'Our products are in compliance with ASME, ASTM, DIN, EN, and national ISO standards.',
-      color: 'text-indigo-500'
+      color: 'text-indigo-500',
+      bg: 'bg-indigo-500/10 border-indigo-500/20 hover:bg-indigo-500 hover:text-white'
     },
     {
       icon: PhoneCall,
       title: 'Excellent Support',
       desc: 'Our support desk is active 24/7 to resolve shipping, chemical certification, or order modification queries.',
-      color: 'text-teal-500'
+      color: 'text-teal-500',
+      bg: 'bg-teal-500/10 border-teal-500/20 hover:bg-teal-500 hover:text-white'
     }
   ];
 
@@ -69,11 +77,11 @@ export default function WhyChooseUs() {
   };
 
   return (
-    <section id="why-choose-us" className="py-24 bg-gradient-lavender-soft/40 border-t border-secondary/20 relative z-10">
+    <section id="why-choose-us" className="py-12 bg-gradient-lavender-soft/40 border-t border-secondary/20 relative z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Section Title */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
+        <div className="text-center max-w-2xl mx-auto mb-8">
           <h2 className="text-xs uppercase font-extrabold text-primary tracking-widest">
             Why Partner With Us
           </h2>
@@ -92,22 +100,22 @@ export default function WhyChooseUs() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, margin: '-100px' }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
         >
           {cards.map((card, idx) => (
             <motion.div
               variants={cardVariants}
               key={idx}
-              className="p-6 rounded-[24px] border border-secondary shadow-glass bg-white hover:border-primary/25 transition-all duration-300 hover:shadow-premium group flex flex-col justify-between"
+              className="p-6 rounded-[24px] border border-secondary/60 shadow-glass bg-white hover:border-primary/25 transition-all duration-300 hover:shadow-premium group flex flex-col justify-between text-left"
             >
               <div className="space-y-4">
                 {/* Icon */}
-                <div className="w-12 h-12 rounded-xl bg-secondary/40 flex items-center justify-center border border-primary/5 transition-transform group-hover:scale-110 duration-300">
+                <div className={`w-12 h-12 rounded-xl ${card.bg.split(' hover:')[0]} border flex items-center justify-center transition-all duration-300 group-hover:scale-110`}>
                   <card.icon className={`w-6 h-6 ${card.color}`} />
                 </div>
 
                 {/* Title & Desc */}
-                <div className="space-y-2 text-left">
+                <div className="space-y-2">
                   <h3 className="text-base font-extrabold text-text-dark group-hover:text-primary transition-colors">
                     {card.title}
                   </h3>

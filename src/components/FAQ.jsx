@@ -57,11 +57,11 @@ export default function FAQ() {
   };
 
   return (
-    <section className="py-24 bg-gradient-lavender-soft/40 border-y border-secondary/20 relative z-10">
+    <section className="py-12 bg-gradient-lavender-soft/40 border-y border-secondary/20 relative z-10">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Title */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
+        <div className="text-center max-w-2xl mx-auto mb-8">
           <h2 className="text-xs uppercase font-extrabold text-primary tracking-widest">
             Common Questions
           </h2>

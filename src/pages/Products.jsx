@@ -4,13 +4,13 @@ export default function Products({ onInquire }) {
   return (
     <div className="w-full">
       {/* Products Banner */}
-      <div className="bg-navbar-bg text-white pt-28 pb-12 border-b border-secondary/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
-          <h1 className="text-3xl font-extrabold font-sans tracking-tight">
+      <div className="bg-gradient-lavender-soft/60 pt-20 pb-8 border-b border-secondary/35 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h1 className="text-3xl font-black font-sans tracking-tight text-gradient">
             Industrial Products Catalog
           </h1>
-          <p className="text-secondary/80 text-sm mt-2 max-w-2xl font-normal leading-relaxed">
-            Discover Maruti Steel India's extensive inventory of ISO-certified stainless steel pipes, sheets, flanges, fasteners, and heavy-duty fittings. Specify custom sizing or grades in your quotation request.
+          <p className="text-xs sm:text-sm text-text-muted mt-2 font-semibold uppercase tracking-wider">
+            Premium Stainless Steel Pipes, Fittings, Flanges & Materials
           </p>
         </div>
       </div>
