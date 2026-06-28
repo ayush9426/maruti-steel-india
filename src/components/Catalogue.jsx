@@ -41,10 +41,10 @@ export default function Catalogue() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Filter Controls Row */}
-        <div className="bg-white p-6 rounded-3xl border border-secondary shadow-premium mb-6 space-y-4">
+        <div className="bg-white p-6 rounded-3xl border border-secondary shadow-premium mb-6">
           <div className="flex flex-col lg:flex-row gap-4 items-center justify-between">
             {/* Search Input & Mobile Filter Toggle (Inline) */}
-            <div className="flex flex-row gap-3 items-center w-full lg:max-w-md">
+            <div className="flex flex-row gap-3 items-center w-full lg:max-w-xs xl:max-w-sm">
               <div className="relative flex-grow">
                 <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-text-muted w-4 h-4" />
                 <input
@@ -66,14 +66,11 @@ export default function Catalogue() {
                 {showMobileFilters ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
               </button>
             </div>
-          </div>
 
-          {/* Desktop Filter Content (Hidden on Mobile) */}
-          <div className="hidden lg:block border-t border-secondary/30 pt-4 space-y-4">
-            <div className="flex flex-col md:flex-row gap-6 justify-between items-start md:items-center">
-              {/* Category Badges */}
-              <div className="space-y-2 text-left">
-                <div className="flex items-center gap-2">
+            {/* Desktop Filter Content (Hidden on Mobile) */}
+            <div className="hidden lg:block">
+              <div className="flex items-center gap-4">
+                <div className="flex items-center gap-2 shrink-0">
                   <SlidersHorizontal className="w-3.5 h-3.5 text-primary" />
                   <span className="text-[10px] font-extrabold uppercase text-text-dark tracking-wider">
                     Categories
@@ -105,7 +102,7 @@ export default function Catalogue() {
                 animate={{ height: 'auto', opacity: 1 }}
                 exit={{ height: 0, opacity: 0 }}
                 transition={{ duration: 0.3, ease: 'easeInOut' }}
-                className="lg:hidden border-t border-secondary/30 pt-4 space-y-4 text-left overflow-hidden"
+                className="lg:hidden border-t border-secondary/30 mt-4 pt-4 space-y-4 text-left overflow-hidden"
               >
                 {/* Categories */}
                 <div className="space-y-2">
