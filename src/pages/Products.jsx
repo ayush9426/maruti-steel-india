@@ -1,6 +1,6 @@
 import Catalogue from '../components/Catalogue';
 
-export default function Products({ onInquire }) {
+export default function Products() {
   return (
     <div className="w-full">
       {/* Products Banner */}
@@ -15,7 +15,7 @@ export default function Products({ onInquire }) {
         </div>
       </div>
 
-      <Catalogue onInquire={onInquire} />
+      <Catalogue />
     </div>
   );
 }

@@ -3,19 +3,6 @@ import { motion } from 'framer-motion';
 import { ArrowRight, Factory } from 'lucide-react';
 
 export default function Hero() {
-  const handleExploreClick = (e, href) => {
-    e.preventDefault();
-    const targetElement = document.querySelector(href);
-    if (targetElement) {
-      const offset = 80;
-      const elementPosition = targetElement.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - offset;
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth',
-      });
-    }
-  };
 
   return (
     <section

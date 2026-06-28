@@ -3,7 +3,7 @@
 
 export const categories = [
   { id: 'all', name: 'All' },
-  { id: 'slot-pipe', name: 'Slot Pipe' },
+  { id: 'pipes', name: 'Pipes' },
   { id: 'sheets', name: 'Sheets & Plates' },
   { id: 'pipe-fittings', name: 'Pipe Fittings' },
   { id: 'industrial-fittings', name: 'Industrial Fittings' }
@@ -16,7 +16,7 @@ export const products = [
     name: 'Stainless Steel Sheets',
     category: 'sheets',
     grades: ['304', '304L', '316', '316L', '321', '310S'],
-    image: '/imageofmaruti/sheet1.png',
+    image: '/imageofmaruti/sheet1.jpg',
     sizes: '0.3mm to 6.0mm thickness',
   },
   {
@@ -44,11 +44,11 @@ export const products = [
     sizes: 'Thickness: 0.05mm to 3.0mm, Widths: 5mm to 500mm',
   },
 
-  // CATEGORY: SLOT PIPE (SS Slot Pipes, Round Pipes, Square Pipes, Rectangular Pipes, Seamless Pipes, Welded Pipes)
+  // CATEGORY: PIPES (SS Slot Pipes, Round Pipes, Square Pipes, Rectangular Pipes, Seamless Pipes, Welded Pipes)
   {
     id: 'ss-slot-pipes',
     name: 'SS Slot Pipes',
-    category: 'slot-pipe',
+    category: 'pipes',
     grades: ['304', '316', '316L'],
     image: '/imageofmaruti/slot1.jpg',
     sizes: 'Diameter 50.8mm, 63.5mm, 76.2mm with custom slots',
@@ -56,7 +56,7 @@ export const products = [
   {
     id: 'ss-round-pipes',
     name: 'SS Round Pipes',
-    category: 'slot-pipe',
+    category: 'pipes',
     grades: ['ASTM A312', 'TP304', 'TP316L', 'TP321'],
     image: '/imageofmaruti/pipe1.jpg',
     sizes: 'OD: 1/4" to 24", Schedule: 10S to XXS',
@@ -64,7 +64,7 @@ export const products = [
   {
     id: 'ss-square-pipes',
     name: 'SS Square Pipes',
-    category: 'slot-pipe',
+    category: 'pipes',
     grades: ['304', '316', '202'],
     image: '/imageofmaruti/squarepipe1.jpg',
     sizes: '20x20mm to 150x150mm, Wall thickness: 1mm to 8mm',
@@ -72,7 +72,7 @@ export const products = [
   {
     id: 'ss-rectangular-pipes',
     name: 'SS Rectangular Pipes',
-    category: 'slot-pipe',
+    category: 'pipes',
     grades: ['304', '316L', '310S'],
     image: '/imageofmaruti/rectangularpipe1.jpg',
     sizes: '20x10mm to 200x100mm, Wall thickness: 1.2mm to 10mm',
@@ -80,7 +80,7 @@ export const products = [
   {
     id: 'seamless-pipes',
     name: 'Stainless Steel Seamless Pipes',
-    category: 'slot-pipe',
+    category: 'pipes',
     grades: ['ASTM A312', 'TP316/316L', 'TP304/304L', 'TP347H', 'UNS S31803 Duplex'],
     image: '/imageofmaruti/seamlesspipe1.jpg',
     sizes: '1/8" NB to 24" NB, SCH 5S to SCH 160 & XXS',
@@ -88,7 +88,7 @@ export const products = [
   {
     id: 'welded-pipes',
     name: 'Stainless Steel Welded Pipes',
-    category: 'slot-pipe',
+    category: 'pipes',
     grades: ['ASTM A312', 'ASTM A358', '304', '316L', '321'],
     image: '/imageofmaruti/weldedpipe1.jpg',
     sizes: '1/2" NB to 48" NB, SCH 5S to SCH 40S',

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Routes, Route, Navigate, useNavigate } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -14,8 +14,6 @@ import Contact from './pages/Contact';
 
 export default function App() {
   const [isLoading, setIsLoading] = useState(true);
-  const [prefilledProduct, setPrefilledProduct] = useState('');
-  const navigate = useNavigate();
 
   useEffect(() => {
     if (isLoading) {
@@ -34,11 +32,6 @@ export default function App() {
     }
   }, [isLoading]);
 
-  const handleInquireProduct = (productName) => {
-    setPrefilledProduct(productName);
-    // Programmatically navigate to the Contact/Inquiry page
-    navigate('/contact');
-  };
 
   return (
     <div className="relative min-h-screen bg-white flex flex-col justify-between">
@@ -60,13 +53,13 @@ export default function App() {
           <Route path="/" element={<Home />} />
 
           {/* Product Catalog Route */}
-          <Route path="/products" element={<Products onInquire={handleInquireProduct} />} />
+          <Route path="/products" element={<Products />} />
 
           {/* About Corporate Route */}
           <Route path="/about" element={<About />} />
 
           {/* Contact & RFQ Route */}
-          <Route path="/contact" element={<Contact prefilledProduct={prefilledProduct} />} />
+          <Route path="/contact" element={<Contact />} />
 
           {/* Fallback to Home */}
           <Route path="*" element={<Navigate to="/" replace />} />

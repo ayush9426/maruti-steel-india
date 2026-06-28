@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Search, SlidersHorizontal, HelpCircle, PhoneCall, Mail, Filter, ChevronDown, ChevronUp } from 'lucide-react';
 import { products, categories } from '../data/products';
 
-export default function Catalogue({ onInquire }) {
+export default function Catalogue() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [showMobileFilters, setShowMobileFilters] = useState(false);
@@ -181,12 +181,12 @@ export default function Catalogue({ onInquire }) {
                 >
                   <div>
                     {/* Product Image Container */}
-                    <div className="relative w-full bg-white overflow-hidden border-b border-secondary/25 flex items-center justify-center">
+                    <div className="relative aspect-[4/3] bg-white overflow-hidden border-b border-secondary/25 flex items-center justify-center">
                       <img
                         src={product.image}
                         alt={product.name}
                         loading="lazy"
-                        className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-105"
+                        className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105"
                       />
                     </div>
 

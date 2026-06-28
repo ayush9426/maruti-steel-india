@@ -119,7 +119,7 @@ export default function About() {
             <div className="flex lg:col-span-6 justify-center order-1 lg:order-2">
               <div className="relative w-full max-w-[460px] aspect-[4/3] rounded-[32px] overflow-hidden shadow-premium-lg border-4 border-white bg-white">
                 <img
-                  src="/images/Maruti workshop.png"
+                  src="/images/Maruti workshop.jpg"
                   alt="Maruti Steel Workshop"
                   className="w-full h-full object-cover"
                 />
