@@ -1,15 +1,14 @@
 import { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Search, SlidersHorizontal, ArrowUpDown, HelpCircle, PhoneCall, Mail, Filter, ChevronDown, ChevronUp } from 'lucide-react';
+import { Search, SlidersHorizontal, HelpCircle, PhoneCall, Mail, Filter, ChevronDown, ChevronUp } from 'lucide-react';
 import { products, categories } from '../data/products';
 
 export default function Catalogue({ onInquire }) {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
-  const [sortBy, setSortBy] = useState('newest'); // newest, popular, alpha
   const [showMobileFilters, setShowMobileFilters] = useState(false);
 
-  // Filter and sort products
+  // Filter products
   const filteredProducts = useMemo(() => {
     let result = [...products];
 
@@ -29,17 +28,8 @@ export default function Catalogue({ onInquire }) {
       );
     }
 
-    // Sort Products
-    if (sortBy === 'alpha') {
-      result.sort((a, b) => a.name.localeCompare(b.name));
-    } else if (sortBy === 'popular') {
-      result.sort((a, b) => b.rating - a.rating);
-    } else if (sortBy === 'newest') {
-      result.sort((a, b) => new Date(b.dateAdded) - new Date(a.dateAdded));
-    }
-
     return result;
-  }, [selectedCategory, searchQuery, sortBy]);
+  }, [selectedCategory, searchQuery]);
 
   const handleInquiryClick = (productName) => {
     const msg = `Hello Maruti Steel India, I would like to inquire about the product: *${productName}*. Please provide pricing, dimensions, and dispatch availability. Thank you.`;
@@ -105,27 +95,6 @@ export default function Catalogue({ onInquire }) {
                   ))}
                 </div>
               </div>
-
-              {/* Sorting */}
-              <div className="space-y-2 text-left md:w-48 w-full">
-                <div className="flex items-center gap-2">
-                  <ArrowUpDown className="w-3.5 h-3.5 text-primary" />
-                  <span className="text-[10px] font-extrabold uppercase text-text-dark tracking-wider">
-                    Sort By
-                  </span>
-                </div>
-                <div className="relative flex items-center bg-lavender-light/40 border border-secondary/60 rounded-full px-4 py-2">
-                  <select
-                    value={sortBy}
-                    onChange={(e) => setSortBy(e.target.value)}
-                    className="bg-transparent text-xs font-semibold text-text-dark focus:outline-none w-full cursor-pointer appearance-none"
-                  >
-                    <option value="newest">Newest Stock</option>
-                    <option value="popular">Popularity (Stars)</option>
-                    <option value="alpha">Alphabetical (A-Z)</option>
-                  </select>
-                </div>
-              </div>
             </div>
           </div>
 
@@ -161,27 +130,6 @@ export default function Catalogue({ onInquire }) {
                         {cat.name}
                       </button>
                     ))}
-                  </div>
-                </div>
-
-                {/* Sort Option */}
-                <div className="space-y-2">
-                  <span className="text-[10px] font-extrabold uppercase text-text-dark tracking-wider block mb-1">
-                    Sort Ordering
-                  </span>
-                  <div className="flex items-center bg-lavender-light/40 border border-secondary/60 rounded-xl px-3 py-2 w-full">
-                    <select
-                      value={sortBy}
-                      onChange={(e) => {
-                        setSortBy(e.target.value);
-                        setShowMobileFilters(false);
-                      }}
-                      className="bg-transparent text-xs font-semibold text-text-dark focus:outline-none w-full cursor-pointer"
-                    >
-                      <option value="newest">Newest Stock</option>
-                      <option value="popular">Popularity (Stars)</option>
-                      <option value="alpha">Alphabetical (A-Z)</option>
-                    </select>
                   </div>
                 </div>
               </motion.div>

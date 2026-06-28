@@ -89,7 +89,7 @@ export default function About() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
             
             {/* Left Column: Intro text */}
-            <div className="lg:col-span-6 space-y-6 text-left">
+            <div className="lg:col-span-6 space-y-6 text-left order-2 lg:order-1">
               
               <p className="text-base text-text-muted leading-relaxed font-normal">
                 <strong>Maruti Steel India</strong> is a trusted manufacturer and stockist of premium stainless steel products, supplying high-quality industrial materials across various sectors with a strong focus on quality, precision, durability, and customer satisfaction.
@@ -115,12 +115,12 @@ export default function About() {
               </div>
             </div>
 
-            {/* Right Column: Image Collage (Hidden on Mobile) */}
-            <div className="hidden lg:flex lg:col-span-6 justify-center">
+            {/* Right Column: Image Collage */}
+            <div className="flex lg:col-span-6 justify-center order-1 lg:order-2">
               <div className="relative w-full max-w-[460px] aspect-[4/3] rounded-[32px] overflow-hidden shadow-premium-lg border-4 border-white bg-white">
                 <img
-                  src="/images/WhatsApp Image 2026-06-27 at 11.11.23 AM.jpeg"
-                  alt="Maruti Steel Raw Inventory"
+                  src="/images/Maruti workshop.png"
+                  alt="Maruti Steel Workshop"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-navbar-bg/30 to-transparent pointer-events-none" />
