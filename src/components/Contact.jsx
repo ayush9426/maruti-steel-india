@@ -33,7 +33,7 @@ export default function Contact({ prefilledProduct }) {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleEmailSubmit = (e) => {
+  const handleEmailSubmit = async (e) => {
     e.preventDefault();
 
     if (!formData.name || !formData.phone || !formData.product) {
@@ -48,56 +48,56 @@ export default function Contact({ prefilledProduct }) {
     setStatus({ submitting: true, success: false, error: null });
 
     try {
-      const subject = `B2B Material Inquiry - ${formData.name}`;
-      const body = `Dear Maruti Steel India team,
-
-I would like to request a quotation for the following requirements:
-
-- Contact Name: ${formData.name}
-- Company: ${formData.company || 'N/A'}
-- Phone Number: ${formData.phone}
-- Email: ${formData.email || 'N/A'}
-- Product Required: ${formData.product}
-
-Additional Details / Message: 
-${formData.message || 'None'}
-
-Please reply with the pricing and availability at your earliest convenience.
-
-Best regards,
-${formData.name}`;
-
-      const mailtoUrl = `mailto:marutisteelindia51@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
-      // Open user mail client
-      window.location.href = mailtoUrl;
-
-      setStatus({
-        submitting: false,
-        success: true,
-        error: null
+      const response = await fetch("https://formsubmit.co/ajax/marutisteelindia51@gmail.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify({
+          _subject: `[Maruti Steel India] B2B Inquiry from ${formData.name}`,
+          _template: "table",
+          "Client Name": formData.name,
+          "Company Name": formData.company || 'N/A',
+          "Phone Number": formData.phone,
+          "Email Address": formData.email || 'N/A',
+          "Product Requested": formData.product,
+          "Message Details": formData.message || 'None'
+        })
       });
 
-      // Reset form
-      setFormData({
-        name: '',
-        company: '',
-        phone: '',
-        email: '',
-        product: '',
-        message: ''
-      });
+      const data = await response.json();
 
-      setTimeout(() => {
-        setStatus((prev) => ({ ...prev, success: false }));
-      }, 5000);
+      if (response.ok && data.success === 'true') {
+        setStatus({
+          submitting: false,
+          success: true,
+          error: null
+        });
+
+        // Reset form
+        setFormData({
+          name: '',
+          company: '',
+          phone: '',
+          email: '',
+          product: '',
+          message: ''
+        });
+
+        setTimeout(() => {
+          setStatus((prev) => ({ ...prev, success: false }));
+        }, 6000);
+      } else {
+        throw new Error(data.message || 'Failed to submit form.');
+      }
 
     } catch (err) {
       console.error('Email action error:', err);
       setStatus({
         submitting: false,
         success: false,
-        error: 'Failed to open email client. Please email marutisteelindia51@gmail.com directly.'
+        error: 'Failed to submit inquiry. Please try again or email marutisteelindia51@gmail.com directly.'
       });
     }
   };
@@ -228,8 +228,8 @@ ${formData.name}`;
                   >
                     <CheckCircle2 className="w-5 h-5 text-emerald-600 flex-shrink-0" />
                     <div>
-                      <p className="font-bold">Inquiry Form Handled!</p>
-                      <p className="font-normal text-emerald-700 mt-0.5">Your email composer has been opened. Please hit send to submit to marutisteelindia51@gmail.com.</p>
+                      <p className="font-bold">Inquiry Submitted Successfully!</p>
+                      <p className="font-normal text-emerald-700 mt-0.5">Your inquiry details have been sent. We will review your requirements and respond shortly.</p>
                     </div>
                   </motion.div>
                 )}
@@ -361,7 +361,7 @@ ${formData.name}`;
                     {status.submitting ? (
                       <>
                         <Loader2 className="w-4 h-4 animate-spin" />
-                        <span>Opening Mail Client...</span>
+                        <span>Sending Inquiry...</span>
                       </>
                     ) : (
                       <>
