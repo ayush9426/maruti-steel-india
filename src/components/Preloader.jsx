@@ -29,12 +29,12 @@ export default function Preloader() {
         osc.stop(ctx.currentTime + delayTime + duration + 0.5);
       };
 
-      // Arpeggiated high-quality metallic chime chord synchronized with the metal sweep (1.0s start)
-      playNote(440.00, 1.0, 3.0, 0.06); // A4 (gentle low pad)
-      playNote(659.25, 1.15, 2.5, 0.05); // E5 (harmony)
-      playNote(880.00, 1.3, 2.2, 0.05); // A5 (higher octave chime)
-      playNote(1046.50, 1.45, 2.0, 0.04); // C6 (chrome ping highlight)
-      playNote(1318.51, 1.6, 3.0, 0.03); // E6 (ultra-high shimmer tone)
+      // Arpeggiated high-quality metallic chime chord synchronized with the metal sweep (0.1s start)
+      playNote(440.00, 0.1, 1.8, 0.06); // A4 (gentle low pad)
+      playNote(659.25, 0.2, 1.6, 0.05); // E5 (harmony)
+      playNote(880.00, 0.3, 1.4, 0.05); // A5 (higher octave chime)
+      playNote(1046.50, 0.4, 1.2, 0.04); // C6 (chrome ping highlight)
+      playNote(1318.51, 0.5, 1.5, 0.03); // E6 (ultra-high shimmer tone)
     } catch (e) {
       console.warn("Audio Context blocked or unsupported by browser autoplay policy", e);
     }
@@ -52,15 +52,15 @@ export default function Preloader() {
     }));
   }, []);
 
-  // Optimized scene transition sequence (8.0s total)
+  // Optimized scene transition sequence (2.8s total)
   useEffect(() => {
     // Play startup chime right after mount
     playStartupChime();
 
     // Timed sequence
-    const scene2Timer = setTimeout(() => setScene(2), 1000); // 1.0s -> Scene 2 (Sweep & Logo reveal)
-    const scene3Timer = setTimeout(() => setScene(3), 2200); // 2.2s -> Scene 3 (Text reveal & stationary display)
-    const scene5Timer = setTimeout(() => setScene(5), 6500); // 6.5s -> Scene 5 (Dissolve)
+    const scene2Timer = setTimeout(() => setScene(2), 150); // 0.15s -> Scene 2 (Sweep & Logo reveal)
+    const scene3Timer = setTimeout(() => setScene(3), 500); // 0.5s -> Scene 3 (Text reveal & stationary display)
+    const scene5Timer = setTimeout(() => setScene(5), 2000); // 2.0s -> Scene 5 (Dissolve)
 
     return () => {
       clearTimeout(scene2Timer);
@@ -73,7 +73,7 @@ export default function Preloader() {
     <motion.div
       initial={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      transition={{ duration: 1.2, ease: [0.76, 0, 0.24, 1] }}
+      transition={{ duration: 0.7, ease: [0.76, 0, 0.24, 1] }}
       className="fixed inset-0 z-[9999] flex items-center justify-center bg-white overflow-hidden select-none"
     >
       {/* Background Soft Gradients and Radial Glow (Scene 1) */}
@@ -122,7 +122,7 @@ export default function Preloader() {
             initial={{ scaleX: 0, opacity: 0 }}
             animate={{ scaleX: 1, opacity: 1 }}
             exit={{ scale: 0.85, opacity: 0 }}
-            transition={{ duration: 1.0, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
             className="relative z-20 w-[90vw] sm:w-[80vw] md:w-[60vw] max-w-2xl h-[45vh] max-h-[380px] flex items-center justify-center pointer-events-none"
           >
             {/* Inner Card (with overflow-hidden for texture & light sweep) */}
@@ -141,18 +141,19 @@ export default function Preloader() {
               <motion.div
                 initial={{ x: '-150%', skewX: -25 }}
                 animate={{ x: '250%' }}
-                transition={{ duration: 1.5, ease: "easeInOut", delay: 0.2 }}
+                transition={{ duration: 1.0, ease: "easeInOut", delay: 0.1 }}
                 className="absolute inset-0 bg-gradient-to-r from-transparent via-white/80 to-transparent w-3/4 pointer-events-none"
               />
 
               {/* Logo and Typography Container - Clean and tightly aligned */}
-              <div className="flex flex-col items-center z-10 space-y-4 text-center">
+              <motion.div layout className="flex flex-col items-center z-10 space-y-4 text-center">
                 
                 {/* Logo reveal (no outline circle, clean floating emblem) */}
                 <motion.div
+                  layout
                   initial={{ scale: 0.85, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
-                  transition={{ duration: 1.0, ease: "easeOut" }}
+                  transition={{ duration: 0.7, ease: "easeOut" }}
                   className="relative w-18 h-18 sm:w-22 sm:h-22 flex items-center justify-center"
                 >
                   <img
@@ -162,39 +163,42 @@ export default function Preloader() {
                   />
                 </motion.div>
 
-                {/* Scene 3: Company Name & Subtitle Fade-in */}
-                {scene >= 3 && (
-                  <div className="space-y-2">
-                    <motion.h1
-                      initial={{ y: 15, opacity: 0 }}
-                      animate={{ y: 0, opacity: 1 }}
-                      transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
-                      className="text-2xl sm:text-3xl font-extrabold tracking-tight text-gradient font-sans"
-                    >
-                      MARUTI STEEL INDIA
-                    </motion.h1>
+                {/* Scene 3: Company Name & Subtitle Fade-in with smooth height expansion */}
+                <motion.div
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={scene >= 3 ? { height: "auto", opacity: 1 } : { height: 0, opacity: 0 }}
+                  transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                  className="overflow-hidden space-y-2 w-full flex flex-col items-center"
+                >
+                  <motion.h1
+                    initial={{ y: 15, opacity: 0 }}
+                    animate={scene >= 3 ? { y: 0, opacity: 1 } : { y: 15, opacity: 0 }}
+                    transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
+                    className="text-2xl sm:text-3xl font-extrabold tracking-tight text-gradient font-sans"
+                  >
+                    MARUTI STEEL INDIA
+                  </motion.h1>
 
-                    <motion.p
-                      initial={{ y: 10, opacity: 0 }}
-                      animate={{ y: 0, opacity: 0.8 }}
-                      transition={{ duration: 0.8, ease: "easeOut", delay: 0.25 }}
-                      className="text-[10px] sm:text-xs text-text-muted max-w-xs sm:max-w-md font-semibold tracking-wide"
-                    >
-                      Manufacturer & Stockist of Premium Stainless Steel Products
-                    </motion.p>
+                  <motion.p
+                    initial={{ y: 10, opacity: 0 }}
+                    animate={scene >= 3 ? { y: 0, opacity: 0.8 } : { y: 10, opacity: 0 }}
+                    transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+                    className="text-[10px] sm:text-xs text-text-muted max-w-xs sm:max-w-md font-semibold tracking-wide"
+                  >
+                    Manufacturer & Stockist of Premium Stainless Steel Products
+                  </motion.p>
 
-                    {/* Thin Glowing Divider Line */}
-                    <div className="flex justify-center pt-2.5">
-                      <motion.div
-                        initial={{ width: 0 }}
-                        animate={{ width: 100 }}
-                        transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
-                        className="h-[2px] bg-[#6260FF] shadow-[0_0_8px_rgba(98,96,255,0.6)] rounded-full"
-                      />
-                    </div>
+                  {/* Thin Glowing Divider Line */}
+                  <div className="flex justify-center pt-2.5">
+                    <motion.div
+                      initial={{ width: 0 }}
+                      animate={scene >= 3 ? { width: 100 } : { width: 0 }}
+                      transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
+                      className="h-[2px] bg-[#6260FF] shadow-[0_0_8px_rgba(98,96,255,0.6)] rounded-full"
+                    />
                   </div>
-                )}
-              </div>
+                </motion.div>
+              </motion.div>
             </div>
 
           </motion.div>

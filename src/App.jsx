@@ -25,7 +25,7 @@ export default function App() {
       const timer = setTimeout(() => {
         setIsLoading(false);
         document.body.style.overflow = '';
-      }, 8000); // Cinematic duration: 8.0 seconds
+      }, 2800); // Cinematic duration: 2.8 seconds
       
       return () => {
         clearTimeout(timer);
