@@ -111,12 +111,10 @@ ${formData.name}`;
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
+
         {/* Section Title */}
         <div className="text-center max-w-2xl mx-auto mb-6">
-          <h2 className="text-xs uppercase font-extrabold text-primary tracking-widest">
-            Send Inquiry
-          </h2>
+
           <p className="mt-2 text-3xl font-extrabold text-text-dark font-sans sm:text-4xl tracking-tight">
             Contact & Inquiry Center
           </p>
@@ -125,7 +123,7 @@ ${formData.name}`;
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
-          
+
           {/* Left Column: Direct Contact Details Panel */}
           <div className="lg:col-span-5 flex flex-col justify-between">
             <motion.div
@@ -136,11 +134,11 @@ ${formData.name}`;
               className="p-8 rounded-[32px] border border-secondary shadow-premium bg-white flex-grow flex flex-col justify-center text-left space-y-8"
             >
               <div>
-                <h3 className="text-lg font-extrabold text-text-dark">Direct Contact Channels</h3>
-                <p className="text-xs text-text-muted mt-1">Connect with our support team or visit our corporate office.</p>
+                <h3 className="text-lg font-extrabold text-text-dark">Direct Contact</h3>
+                <p className="text-xs text-text-muted mt-1">Connect or visit our corporate office.</p>
               </div>
 
-               {/* Info List */}
+              {/* Info List */}
               <div className="space-y-4">
                 {/* Contact Person */}
                 <div className="flex items-center gap-4 group p-4 rounded-2xl bg-lavender-light/35 border border-secondary/40 transition-colors">
@@ -148,7 +146,7 @@ ${formData.name}`;
                     <User size={22} />
                   </div>
                   <div>
-                    <h4 className="text-[10px] uppercase font-extrabold text-text-muted tracking-wider leading-none">Owner / Contact Person</h4>
+                    <h4 className="text-[10px] uppercase font-extrabold text-text-muted tracking-wider leading-none">Owner</h4>
                     <p className="text-sm font-extrabold text-text-dark mt-1.5">Shravan Purohit</p>
                     <p className="text-xs text-text-muted mt-0.5">Managing Director</p>
                   </div>
@@ -165,7 +163,6 @@ ${formData.name}`;
                   <div>
                     <h4 className="text-[10px] uppercase font-extrabold text-text-muted tracking-wider leading-none">Mobile Number</h4>
                     <p className="text-sm font-extrabold text-text-dark mt-1.5 group-hover:text-primary transition-colors">+91 9512865802</p>
-                    <p className="text-xs text-text-muted mt-0.5">Mon - Sat: 9:00 AM - 7:00 PM</p>
                   </div>
                 </a>
 
@@ -217,7 +214,7 @@ ${formData.name}`;
             >
               <h3 className="text-xl font-extrabold text-text-dark mb-6 flex items-center gap-2">
                 <Landmark className="text-primary w-5 h-5 animate-pulse" />
-                <span>Submit B2B Material Inquiry</span>
+                <span>Submit Inquiry</span>
               </h3>
 
               {/* Success Alert */}
@@ -266,7 +263,7 @@ ${formData.name}`;
                       required
                       value={formData.name}
                       onChange={handleChange}
-                      placeholder="e.g. Rajesh Shah"
+                      placeholder="Your Name"
                       className="w-full bg-lavender-light/30 border border-secondary/60 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all text-text-dark font-semibold"
                     />
                   </div>
@@ -302,7 +299,7 @@ ${formData.name}`;
                       required
                       value={formData.phone}
                       onChange={handleChange}
-                      placeholder="e.g. +91 99999 99999"
+                      placeholder="Valid 10 Digit Mobile Number"
                       className="w-full bg-lavender-light/30 border border-secondary/60 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all text-text-dark font-semibold"
                     />
                   </div>
@@ -317,7 +314,7 @@ ${formData.name}`;
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
-                      placeholder="e.g. purchase@company.com"
+                      placeholder="youremail@gmail.com"
                       className="w-full bg-lavender-light/30 border border-secondary/60 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all text-text-dark font-semibold"
                     />
                   </div>
@@ -349,7 +346,7 @@ ${formData.name}`;
                     rows={4}
                     value={formData.message}
                     onChange={handleChange}
-                    placeholder="ASTM specs, material grade (e.g. 304 or 316L), schedules (SCH 10/40), and target dispatch schedules..."
+                    placeholder="Material grade (e.g. 304 or 316L), schedules (SCH 10/40), and target dispatch schedules..."
                     className="w-full bg-lavender-light/30 border border-secondary/60 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all text-text-dark font-semibold resize-none"
                   />
                 </div>
@@ -369,7 +366,7 @@ ${formData.name}`;
                     ) : (
                       <>
                         <Send className="w-3.5 h-3.5" />
-                        <span>Send B2B Inquiry</span>
+                        <span>Send Inquiry</span>
                       </>
                     )}
                   </button>

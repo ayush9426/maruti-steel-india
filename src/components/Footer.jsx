@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowUp, Phone, Mail, MapPin, Clock, MessageSquare, ShieldCheck } from 'lucide-react';
+import { ArrowUp, Phone, Mail, MapPin, Clock, MessageSquare } from 'lucide-react';
 
 export default function Footer() {
   const [showScrollTop, setShowScrollTop] = useState(false);

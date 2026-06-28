@@ -104,10 +104,7 @@ export default function About() {
                   <span className="text-primary font-bold">✔</span>
                   <span className="text-xs font-bold text-text-dark">ISO 9001:2015 Standards</span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <span className="text-primary font-bold">✔</span>
-                  <span className="text-xs font-bold text-text-dark">MTC EN 10204 3.1 Traceability</span>
-                </div>
+
                 <div className="flex items-center gap-2">
                   <span className="text-primary font-bold">✔</span>
                   <span className="text-xs font-bold text-text-dark">PAN India Logistics</span>
