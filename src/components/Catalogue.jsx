@@ -181,12 +181,12 @@ export default function Catalogue({ onInquire }) {
                 >
                   <div>
                     {/* Product Image Container */}
-                    <div className="relative aspect-[4/3] bg-lavender-light/30 overflow-hidden border-b border-secondary/20">
+                    <div className="relative w-full bg-white overflow-hidden border-b border-secondary/25 flex items-center justify-center">
                       <img
                         src={product.image}
                         alt={product.name}
                         loading="lazy"
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-105"
                       />
                     </div>
 
