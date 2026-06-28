@@ -23,7 +23,6 @@ export default function Catalogue({ onInquire }) {
       result = result.filter(
         (p) =>
           p.name.toLowerCase().includes(query) ||
-          p.description.toLowerCase().includes(query) ||
           p.grades.some((g) => g.toLowerCase().includes(query))
       );
     }
@@ -189,10 +188,6 @@ export default function Catalogue({ onInquire }) {
                         loading="lazy"
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                       />
-                      {/* Category Label overlay */}
-                      <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm border border-secondary/40 text-primary px-3 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-wider">
-                        {categories.find((c) => c.id === product.category)?.name}
-                      </div>
                     </div>
 
                     {/* Product Info */}
@@ -206,9 +201,6 @@ export default function Catalogue({ onInquire }) {
                         </p>
                       </div>
 
-                      <p className="text-sm text-text-muted leading-relaxed line-clamp-3">
-                        {product.description}
-                      </p>
 
                       {/* Material Grades Badges */}
                       <div className="space-y-1.5">
