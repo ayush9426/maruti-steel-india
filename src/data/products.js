@@ -6,7 +6,9 @@ export const categories = [
   { id: 'pipes', name: 'Pipes' },
   { id: 'sheets', name: 'Sheets & Plates' },
   { id: 'pipe-fittings', name: 'Pipe Fittings' },
-  { id: 'industrial-fittings', name: 'Industrial Fittings' }
+  { id: 'industrial-fittings', name: 'Industrial Fittings' },
+  { id: 'furniture-railing', name: 'Furniture & Railing' },
+  { id: 'accessories', name: 'Accessories Items' }
 ];
 
 export const products = [
@@ -218,5 +220,129 @@ export const products = [
     grades: ['A2-70', 'A4-80 (316)', 'Duplex S31803', 'Super Duplex'],
     image: '/imageofmaruti/fasners1.jpg',
     sizes: 'M3 to M64, custom lengths up to 3 meters',
+  },
+
+  // CATEGORY: FURNITURE & RAILING (Classic Jhula, Curved Jhula, Steel Railing, PVD Railing, Glass Railing)
+  {
+    id: 'ss-swing-jhula-classic',
+    name: 'SS Classic Swing Jhula',
+    category: 'furniture-railing',
+    grades: ['SS 304 Grade', 'Heavy Duty Steel', 'Polished Finish'],
+    image: '/imageofmaruti/jhula1.jpg',
+    sizes: 'Customizable, Standard Height: 6.5ft, Width: 4.5ft',
+  },
+  {
+    id: 'ss-swing-jhula-premium',
+    name: 'SS Premium Curved Swing Jhula',
+    category: 'furniture-railing',
+    grades: ['SS 304 Grade', 'High Polish Finish', 'Ornate Chains'],
+    image: '/imageofmaruti/jhula2.jpg',
+    sizes: 'Customizable, Standard Height: 7ft, Width: 5ft',
+  },
+  {
+    id: 'ss-steel-railing',
+    name: 'SS Designer Steel Railing',
+    category: 'furniture-railing',
+    grades: ['Grade 304', 'Grade 316', 'Glossy / Satin Finish'],
+    image: '/imageofmaruti/railing1.jpg',
+    sizes: 'Standard Heights: 900mm, 1000mm, 1100mm, custom lengths',
+  },
+  {
+    id: 'ss-pvd-railing',
+    name: 'SS Gold PVD Railing',
+    category: 'furniture-railing',
+    grades: ['PVD Gold Plated', 'Grade 304', 'Rose Gold / Bronze'],
+    image: '/imageofmaruti/pvdrailing1.jpg',
+    sizes: 'Custom heights: 3ft to 4ft, customizable designer bars',
+  },
+  {
+    id: 'ss-glass-railing',
+    name: 'SS Frameless Glass Railing',
+    category: 'furniture-railing',
+    grades: ['Grade 316 Base Spigots', 'Tempered Toughened Glass'],
+    image: '/imageofmaruti/glassrailing1.jpg',
+    sizes: 'Spigot Height: 150mm/200mm, Glass Thickness: 10mm to 15mm',
+  },
+
+  // CATEGORY: ACCESSORIES ITEMS (Wooden Pillar, Master Pillar, Crystal Pillar, SS Pillar, CNC Pillar, Ball Fitting, Accessories)
+  {
+    id: 'ss-wooden-pillar',
+    name: 'SS & Wooden Luxury Balustrade Pillar',
+    category: 'accessories',
+    grades: ['Grade 304 SS', 'Premium Teak Wood / Mahogany'],
+    image: '/imageofmaruti/woodenpillar1.jpg',
+    sizes: 'Height: 32 inches, 35 inches, 38 inches',
+  },
+  {
+    id: 'ss-master-pillar',
+    name: 'SS Heavy Master Baluster Pillar',
+    category: 'accessories',
+    grades: ['Grade 304', 'High Gloss Polish', 'Heavy Base Plate'],
+    image: '/imageofmaruti/masterpillar1.jpg',
+    sizes: 'Height: 40 inches, Width: 4x4 inches',
+  },
+  {
+    id: 'ss-crystal-pillar',
+    name: 'SS Crystal Acrylic Baluster Pillar',
+    category: 'accessories',
+    grades: ['Premium Acrylic Glass', 'Grade 304 Base & Cap'],
+    image: '/imageofmaruti/crystalpillar1.jpg',
+    sizes: 'Height: 34 inches, 36 inches',
+  },
+  {
+    id: 'ss-designer-pillar',
+    name: 'SS Designer Baluster Pillar',
+    category: 'accessories',
+    grades: ['Grade 304', 'Grade 316', 'Satin / Matte Finish'],
+    image: '/imageofmaruti/designerpillar1.jpg',
+    sizes: 'Height: 34 inches, Standard 35mm to 50mm width',
+  },
+  {
+    id: 'ss-cnc-pillar',
+    name: 'SS CNC Laser-Cut Sheet Baluster Pillar',
+    category: 'accessories',
+    grades: ['Grade 304', 'CNC Cut Custom Patterns'],
+    image: '/imageofmaruti/cncpillar1.jpg',
+    sizes: 'Height: 35 inches, Thickness: 8mm to 12mm',
+  },
+  {
+    id: 'ss-ball-fitting',
+    name: 'SS Decorative Hollow Ball Fitting',
+    category: 'accessories',
+    grades: ['Grade 202', 'Grade 304', 'High Mirror Polish'],
+    image: '/imageofmaruti/ballfitting1.jpg',
+    sizes: 'Diameter: 1" to 8" (25mm to 200mm)',
+  },
+  {
+    id: 'ss-ball-base',
+    name: 'SS Balustrade Ball Base Cap',
+    category: 'accessories',
+    grades: ['Grade 304', 'Mirror / Brushed Finish'],
+    image: '/imageofmaruti/ballbase1.jpg',
+    sizes: 'Fits Tube OD: 1", 1.5", 2", 2.5", 3"',
+  },
+  {
+    id: 'ss-wall-bracket',
+    name: 'SS Handrail Wall Mounting Bracket',
+    category: 'accessories',
+    grades: ['Grade 304', 'Grade 316 Heavy Duty'],
+    image: '/imageofmaruti/wallbracket1.jpg',
+    sizes: 'Adjustable & Fixed types, to suit 1.5" or 2" tubes',
+  },
+  {
+    id: 'ss-glass-holder',
+    name: 'SS Glass Bracket D-Clamp Holder',
+    category: 'accessories',
+    grades: ['Grade 316', 'Rubber Gasket Inserts Included'],
+    image: '/imageofmaruti/glassholder1.jpg',
+    sizes: 'Supports glass thickness 8mm to 12mm',
+  },
+  {
+    id: 'ss-end-connector',
+    name: 'SS Handrail End Connector Caps',
+    category: 'accessories',
+    grades: ['Grade 304', 'Domed & Flat variants'],
+    image: '/imageofmaruti/endconnector1.jpg',
+    sizes: 'Suits standard pipe sizes 1/2" to 3" OD',
   }
 ];
