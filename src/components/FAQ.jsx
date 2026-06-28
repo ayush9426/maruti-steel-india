@@ -8,11 +8,7 @@ export default function FAQ() {
   const faqs = [
     {
       q: 'What grades of stainless steel do you supply?',
-      a: 'We supply a wide range of stainless steel grades, including Austenitic (304, 304L, 316, 316L, 321, 310, 310S), Martensitic (410, 420), Ferritic (409, 430), and Duplex steel grades (S31803, S32205) matching ASTM and ASME raw specifications.'
-    },
-    {
-      q: 'Do you provide Mill Test Certificates (MTC)?',
-      a: 'Yes, absolutely. All raw materials and finished products are shipped alongside Mill Test Certificates (MTC) conforming to EN 10204 3.1 standards. Certificates outline chemical composition analysis, heat numbers, tensile strength, elongation, and hardness test metrics.'
+      a: 'We supply a wide range of stainless steel grades, including Austenitic (304, 304L, 316, 316L, 321, 310, 310S), Martensitic (410, 420), Ferritic (409, 430), and Duplex steel grades.'
     },
     {
       q: 'What is Maruti Steel\'s minimum order quantity (MOQ)?',
@@ -35,10 +31,6 @@ export default function FAQ() {
       a: 'Yes, we provide PAN India delivery. We have established relationships with leading transport agencies and freight forwarders, allowing us to deliver packages safely and efficiently to Maharashtra, Tamil Nadu, Karnataka, Rajasthan, Uttar Pradesh, and all other Indian states.'
     },
     {
-      q: 'Are your products compliant with ASME and ASTM standards?',
-      a: 'Yes, our products conform to top international standards including ASTM A312 (seamless and welded pipes), ASTM A403 (wrought fittings), ASTM A182 (forged flanges and valves), and ASTM A240 (sheets and plates).'
-    },
-    {
       q: 'Do you support third-party inspections (TPI)?',
       a: 'We fully welcome and support third-party inspections. You are welcome to nominate your inspection agency (such as SGS, TUV, DNV, Lloyd\'s Register, or Bureau Veritas) to verify chemical compositions and mechanical testing before dispatch.'
     },
@@ -49,6 +41,14 @@ export default function FAQ() {
     {
       q: 'What are Maruti Steel\'s standard payment terms for B2B accounts?',
       a: 'For new clients, we usually operate on a pro-forma advance basis or a partial advance deposit with the balance payable against goods dispatch. For established corporate buyers and repeat accounts, credit terms can be configured upon credit verification.'
+    },
+    {
+      q: 'Where is your stockyard located ?',
+      a: 'Our stockyard is based in Ahmedabad, Gujarat. Clients or their appointed representatives are welcome to visit our yard to inspect the materials, dimensions, and finishing before dispatch, with prior coordination.'
+    },
+    {
+      q: 'How do you package pipes and fittings to prevent damage during transit?',
+      a: 'Pipes are bundled with protective end-caps to shield the bevels, while smaller items like flanges, valves, and pipe fittings are packed in sturdy wooden boxes or crates to prevent surface scratches and thread damage during transport.'
     }
   ];
 
@@ -59,7 +59,7 @@ export default function FAQ() {
   return (
     <section className="py-12 bg-gradient-lavender-soft/40 border-y border-secondary/20 relative z-10">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Title */}
         <div className="text-center max-w-2xl mx-auto mb-8">
           <h2 className="text-xs uppercase font-extrabold text-primary tracking-widest">

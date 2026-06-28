@@ -41,7 +41,7 @@ export default function Hero() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          
+
           {/* Left Text Column */}
           <div className="lg:col-span-7 text-left space-y-6 sm:space-y-8">
             {/* Tagline Badge */}
@@ -53,7 +53,7 @@ export default function Hero() {
             >
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
               <span className="text-xs uppercase font-extrabold tracking-wider text-primary">
-                ISO 9001:2015 Certified
+                Premium STainless Steel
               </span>
             </motion.div>
 
@@ -110,7 +110,7 @@ export default function Hero() {
                 className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent pointer-events-none" />
-              
+
               {/* Floating Glassmorphic badge */}
               <div className="absolute bottom-6 left-6 right-6 p-4 rounded-2xl glass-panel border border-white/40 shadow-premium flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
@@ -138,7 +138,7 @@ export default function Hero() {
               transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
               className="absolute bottom-1/2 -right-2 sm:-right-6 bg-white/90 backdrop-blur-md px-3 sm:px-4 py-2.5 rounded-2xl border border-secondary shadow-premium text-[10px] sm:text-xs font-bold text-text-dark hidden sm:flex items-center gap-2"
             >
-              <span className="text-primary font-bold">★</span> 20+ Yrs Metallurgy Experience
+              <span className="text-primary font-bold">★</span> 7+ Yrs Experience
             </motion.div>
           </div>
 

@@ -29,10 +29,10 @@ export default function Footer() {
   return (
     <footer className="bg-navbar-bg border-t border-white/10 relative z-10 pt-16 pb-8 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Main Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-white/10 text-left">
-          
+
           {/* Column 1: Company Profile (5 cols) */}
           <div className="lg:col-span-5 space-y-6">
             <div className="flex items-center gap-3">
@@ -48,7 +48,7 @@ export default function Footer() {
                 <span className="text-[9px] uppercase font-bold text-primary-light tracking-widest leading-none mt-1">India</span>
               </div>
             </div>
-            
+
             <p className="text-xs text-white/70 leading-relaxed font-normal">
               A premier manufacturer, stockist, and distributor of stainless steel sheets, plates, round/square pipes, welded tubing, industrial flanges, and fasteners. Proudly serving industrial infrastructure across India.
             </p>
@@ -82,10 +82,7 @@ export default function Footer() {
               </a>
             </div>
 
-            <div className="flex items-center gap-2 pt-2 text-[10px] uppercase font-extrabold text-primary-light tracking-wider">
-              <ShieldCheck size={16} />
-              <span>ISO 9001:2015 Approved Vendor</span>
-            </div>
+
           </div>
 
           {/* Column 2: Quick Links (3 cols) */}
@@ -122,7 +119,7 @@ export default function Footer() {
             <h4 className="text-xs uppercase font-extrabold text-white tracking-wider">
               Contact Office
             </h4>
-            
+
             <div className="space-y-3 text-xs font-semibold text-white/60">
               <div className="flex gap-2">
                 <MapPin size={16} className="text-primary-light flex-shrink-0 mt-0.5" />
@@ -130,14 +127,14 @@ export default function Footer() {
                   Shed No. 13/4, Laxmi Estate, Opp. Ajay Estate, Keval Kanta, Rakhial, Ahmedabad – 380023
                 </span>
               </div>
-              
+
               <div className="flex gap-2 items-center">
                 <Phone size={16} className="text-primary-light flex-shrink-0" />
                 <a href="tel:+919512865802" className="hover:text-primary-light transition-colors">
                   +91 9512865802
                 </a>
               </div>
-              
+
               <div className="flex gap-2 items-center">
                 <Mail size={16} className="text-primary-light flex-shrink-0" />
                 <a href="mailto:marutisteelindia51@gmail.com" className="hover:text-primary-light transition-colors">
@@ -148,7 +145,7 @@ export default function Footer() {
               <div className="flex gap-2 items-start border-t border-white/10 pt-2 mt-2">
                 <Clock size={16} className="text-primary-light flex-shrink-0 mt-0.5" />
                 <div>
-                  <p className="font-extrabold text-white">Mon - Sat: 9:00 AM - 7:00 PM</p>
+                  <p className="font-extrabold text-white">Mon - Sat: 9:00 AM - 8:00 PM</p>
                   <p className="text-[10px] text-white/50 font-normal mt-0.5">Sunday: Closed</p>
                 </div>
               </div>
@@ -163,9 +160,9 @@ export default function Footer() {
             © {currentYear} Maruti Steel India. All Rights Reserved.
           </div>
           <div className="flex gap-2 items-center text-[10px] uppercase font-bold text-white/40">
-            <span>Owner: Shravan Purohit</span>
+
             <span className="w-1.5 h-1.5 rounded-full bg-primary-light/45" />
-            <span>Industrial Metallurgy Solutions</span>
+            <span>Industrial Metal Solutions</span>
           </div>
         </div>
 

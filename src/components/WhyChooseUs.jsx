@@ -13,6 +13,7 @@ export default function WhyChooseUs() {
     {
       icon: BadgeDollarSign,
       title: 'Competitive Pricing',
+
       desc: 'Our direct-to-customer business model ensures that you receive high-quality materials at factory rates.',
       color: 'text-emerald-500',
       bg: 'bg-emerald-500/10 border-emerald-500/20 hover:bg-emerald-500 hover:text-white'
@@ -48,7 +49,7 @@ export default function WhyChooseUs() {
     {
       icon: ClipboardList,
       title: 'Industrial Standards',
-      desc: 'Our products are in compliance with ASME, ASTM, DIN, EN, and national ISO standards.',
+      desc: 'Our products are in compliance with ASME, ASTM and national ISO standards.',
       color: 'text-indigo-500',
       bg: 'bg-indigo-500/10 border-indigo-500/20 hover:bg-indigo-500 hover:text-white'
     },
