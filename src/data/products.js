@@ -232,6 +232,14 @@ export const products = [
     sizes: 'Customizable, Standard Height: 6.5ft, Width: 4.5ft',
   },
   {
+    id: 'ss-wooden-swing-jhula',
+    name: 'Premium Wooden Swing Jhula',
+    category: 'furniture-railing',
+    grades: ['Premium Teak Wood', 'SS 304 Hanging Chains', 'Elegant Carved Finish'],
+    image: '/imageofmaruti/sswoodenjula1.jpg',
+    sizes: 'Standard Seat: 4ft x 2ft, Stand Height: 6.5ft (Customizable)',
+  },
+  {
     id: 'ss-steel-railing',
     name: 'SS Designer Steel Railing',
     category: 'furniture-railing',
@@ -296,6 +304,22 @@ export const products = [
     grades: ['Grade 304', 'CNC Cut Custom Patterns'],
     image: '/imageofmaruti/sscnclaser-cutpiller1.jpg',
     sizes: 'Height: 35 inches, Thickness: 8mm to 12mm',
+  },
+  {
+    id: 'ss-pvd-luxury-pillar',
+    name: 'SS Gold PVD Luxury Baluster Pillar',
+    category: 'accessories',
+    grades: ['PVD Gold Plated', 'Grade 304 SS', 'Geometric Lattice Insert'],
+    image: '/imageofmaruti/sspvdpillar.png',
+    sizes: 'Height: 35 inches, Width: 40mm',
+  },
+  {
+    id: 'ss-brass-inlay-pillar',
+    name: 'SS Brass Inlay Designer Baluster Pillar',
+    category: 'accessories',
+    grades: ['Grade 304 SS', 'Premium Brass Inlay', 'High-Gloss Polished'],
+    image: '/imageofmaruti/ssbrasspillar.png',
+    sizes: 'Height: 36 inches, Width: 35mm',
   },
   {
     id: 'ss-ball-fitting',
