@@ -353,12 +353,12 @@ export const products = [
     image: '/imageofmaruti/ssbracketD-clampholder1.jpg',
     sizes: 'Supports glass thickness 8mm to 12mm',
   },
-  {
-    id: 'ss-end-connector',
-    name: 'SS Handrail End Connector Caps',
-    category: 'accessories',
-    grades: ['Grade 304', 'Domed & Flat variants'],
-    image: '/imageofmaruti/sshandrailendconnectorcap1.jpg',
-    sizes: 'Suits standard pipe sizes 1/2" to 3" OD',
-  }
+  // {
+  //   id: 'ss-end-connector',
+  //   name: 'SS Handrail End Connector Caps',
+  //   category: 'accessories',
+  //   grades: ['Grade 304', 'Domed & Flat variants'],
+  //   image: '/imageofmaruti/sshandrailendconnectorcap1.jpg',
+  //   sizes: 'Suits standard pipe sizes 1/2" to 3" OD',
+  // }
 ];
